@@ -1,0 +1,893 @@
+/* Mengatur semua elemen supaya ukuran dan jaraknya lebih mudah dihitung */
+* {
+    box-sizing: border-box;
+}
+
+/* Pengaturan dasar untuk seluruh halaman website */
+body {
+    margin: 0; /* Menghilangkan jarak bawaan browser */
+    padding: 0;
+    background-color: #f1f6fd; /* Warna latar belakang halaman */
+    color: #1e293b; /* Warna tulisan utama */
+    font-family: 'Poppins', sans-serif; /* Jenis huruf */
+    font-size: 12px; /* Ukuran tulisan dasar */
+}
+
+
+/* ================= NAVBAR ================= */
+/* Mengatur bagian paling atas website */
+.navbar {
+    display: flex; /* Menyusun isi secara mendatar */
+    align-items: center; /* Membuat isi sejajar di tengah */
+    justify-content: space-between; /* Memberi jarak antarbagian */
+    flex-wrap: wrap; /* Isi boleh turun jika ruang tidak cukup */
+    gap: 16px; /* Jarak antarbagian */
+    background-color: #fff; /* Latar putih */
+    padding: 12px 3%; /* Jarak dalam */
+    min-height: 83px; /* Tinggi minimal navbar */
+}
+
+/* Menyatukan logo KAI dan tulisan di sampingnya */
+.navbar-kiri {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+/* Tampilan tulisan logo KAI */
+.logo-kai {
+    font-size: 42px;
+    font-weight: 700; /* Tulisan tebal */
+    font-style: italic; /* Tulisan miring */
+    letter-spacing: -3px; /* Jarak antarhuruf */
+    color: #2b2a8f;
+    border-bottom: 5px solid #f26b21; /* Garis oranye di bawah logo */
+    line-height: 1;
+}
+
+/* Tulisan penjelas di samping logo */
+.tagline {
+    font-size: 12px;
+    font-weight: 500;
+    color: #1e3a8a;
+    line-height: 1.4; /* Jarak antarbaris */
+}
+
+/* Mengatur menu Beranda, Layanan, Riwayat, dan Bantuan */
+.menu {
+    display: flex;
+    height: 83px;
+}
+
+/* Mengatur setiap tulisan menu */
+.menu .menu-item {
+    display: flex;
+    align-items: center;
+    position: relative; /* Jadi patokan untuk garis menu aktif */
+    margin-right: 32px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer; /* Kursor berubah saat diarahkan */
+    transition: color 0.3s ease; /* Perubahan warna lebih halus */
+}
+
+/* Warna menu saat kursor diarahkan ke sana */
+.menu .menu-item:hover {
+    color: #1d63d6;
+}
+
+/* Tampilan menu yang sedang dipilih */
+.menu .menu-item.aktif {
+    font-weight: 700;
+    color: #0f2a5c;
+}
+
+/* Membuat garis di bawah menu yang aktif */
+.menu .menu-item.aktif::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    background-color: #1d63d6;
+}
+
+/* Tampilan kotak pencarian */
+.pencarian {
+    width: 290px; /* Lebar kotak pencarian */
+    padding: 10px 14px;
+    border: 1px solid #c7d6ee; /* Garis tepi */
+    border-radius: 8px; /* Membuat sudut membulat */
+    background-color: #f7faff;
+    color: #8696b0;
+}
+
+/* Mengatur bagian profil pengguna di navbar */
+.user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Bentuk avatar atau lingkaran foto profil */
+.avatar {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%; /* Membuat bentuk lingkaran */
+    background-color: #2f66b8;
+    color: white;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Menaruh ikon di tengah */
+}
+
+/* Avatar dengan ukuran lebih besar di bagian profil */
+.avatar.besar {
+    width: 54px;
+    height: 54px;
+    background-color: #d6e4f8;
+    color: #2f66b8;
+    font-size: 26px;
+}
+
+
+/* ================= HERO / BANNER ================= */
+/* Banner besar di bawah navbar */
+.hero {
+    display: flex;
+    align-items: center;
+    min-height: 198px;
+    padding: 20px 3%;
+    color: white;
+    /* Membuat latar belakang dengan perpaduan warna biru */
+    background-image: linear-gradient(90deg, #7aa5d6, #2f78d1 38%, #1d63c4 70%, #3a7fcf);
+}
+
+/* Bagian simbol kereta di sebelah kiri banner */
+.kereta {
+    flex: 0 0 34%; /* Menyediakan ruang sebesar 34% */
+    font-size: 110px;
+    line-height: 1;
+}
+
+/* Bagian tulisan dan kotak layanan dalam banner */
+.hero-isi {
+    flex: 1; /* Mengisi sisa ruang yang tersedia */
+}
+
+/* Judul sambutan pada banner */
+.hero-judul {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Tulisan penjelas di bawah judul */
+.hero-teks {
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 6px 0 16px; /* Jarak atas, kanan-kiri, dan bawah */
+}
+
+/* Menyusun tiga kotak layanan di dalam banner */
+.hero-boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+/* Tampilan kotak untuk setiap layanan */
+.hero-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background-color: #fff;
+    color: #1e293b;
+    border-radius: 8px;
+    padding: 12px 16px;
+    min-width: 190px;
+    transition: 0.3s;
+}
+
+/* Kotak layanan sedikit naik saat kursor diarahkan */
+.hero-item:hover {
+    transform: translateY(-4px);
+}
+
+/* Bentuk lingkaran ikon layanan */
+.hero-ikon {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #1d63d6;
+    color: white;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Mengubah warna ikon PLN menjadi hijau */
+.hero-ikon.hijau {
+    background-color: #12a05c;
+}
+
+/* Nama layanan di banner */
+.hero-nama {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Keterangan singkat layanan */
+.hero-desk {
+    font-size: 11px;
+    color: #475569;
+}
+
+
+/* ================= HALAMAN UTAMA ================= */
+/* Membagi halaman menjadi tiga kolom */
+.halaman {
+    display: grid;
+
+    /* Kolom kiri 215px, tengah mengisi sisa ruang,
+       dan kolom kanan 270px */
+    grid-template-columns: 215px 1fr 270px;
+
+    gap: 20px;
+    padding: 12px 2.5% 12px;
+    align-items: start; /* Kolom dimulai dari bagian atas */
+}
+
+/* Tampilan dasar untuk kolom kiri, tengah, dan kanan */
+.sidebar,
+.tengah,
+.kanan {
+    background-color: #fff;
+    border: 1px solid #e3ecf8;
+    border-radius: 10px;
+    padding: 14px;
+}
+
+/* Kolom kanan tidak memakai kotak putih pembungkus */
+.kanan {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+}
+
+
+/* ================= SIDEBAR / KOLOM KIRI ================= */
+/* Membuat kotak logo Mobile JKN */
+.logo-jkn {
+    width: 66px;
+    height: 66px;
+    margin: 0 auto 14px; /* Logo berada di tengah */
+    border: 3px solid #fff;
+    outline: 3px solid #1d63d6;
+    border-radius: 14px;
+    background-color: #1d63d6;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    line-height: 1.1;
+    padding-top: 12px;
+}
+
+/* Membuat tulisan JKN di logo lebih besar */
+.logo-jkn b {
+    font-size: 22px;
+}
+
+/* Mengatur setiap menu di sisi kiri */
+.side-menu {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 12px 10px;
+    margin-bottom: 4px;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Mengubah latar menu saat kursor diarahkan */
+.side-menu:hover {
+    background-color: #eef4fd;
+}
+
+/* Tampilan menu sidebar yang sedang dipilih */
+.side-menu.aktif {
+    background-color: #dbeafd;
+    font-weight: 700;
+    color: #0f2a5c;
+}
+
+/* Mengatur ikon di setiap menu sidebar */
+.side-ikon {
+    width: 22px;
+    text-align: center;
+    font-size: 16px;
+    color: #1d4f9c;
+}
+
+/* Kotak promosi di bagian bawah sidebar */
+.side-promo {
+    margin-top: 24px;
+    padding: 18px 14px 12px;
+    border-radius: 8px;
+    /* Warna latar berubah dari biru muda ke biru lebih terang */
+    background-image: linear-gradient(180deg, #e6f0fd, #cfe3fb);
+    color: #1d4f9c;
+}
+
+/* Tulisan utama promosi */
+.promo-judul {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Tulisan promosi dengan gaya huruf miring */
+.promo-script {
+    margin-top: 12px;
+    font-family: cursive;
+    font-size: 19px;
+    font-style: italic;
+    line-height: 1.1;
+    padding-left: 10px;
+}
+
+
+/* ================= PROFIL PESERTA ================= */
+/* Mengatur posisi informasi profil dan tombol kartu */
+.profil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+/* Menyatukan avatar dan informasi nama peserta */
+.profil-kiri {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+/* Nama peserta dibuat lebih tebal */
+.profil-nama {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+/* Tulisan Peserta JKN dan statusnya */
+.profil-sub {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    margin-top: 2px;
+}
+
+/* Label hijau untuk menunjukkan status aktif */
+.badge {
+    display: inline-block;
+    background-color: #c8f0d6;
+    color: #12834a;
+    font-size: 11px;
+    font-weight: 500;
+    padding: 1px 12px;
+    border-radius: 99px; /* Membuat ujung label membulat */
+}
+
+/* Tombol Lihat Kartu Peserta */
+.tombol-garis {
+    border: 1px solid #c7d6ee;
+    background-color: #eef4fd;
+    color: #1d63d6;
+    font-weight: 600;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Warna tombol berubah saat kursor diarahkan */
+.tombol-garis:hover {
+    background-color: #dbeafd;
+}
+
+
+/* ================= INFORMASI PESERTA ================= */
+/* Kotak berisi nomor peserta, tanggal lahir, dan kelas */
+.info-bar {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #e6effb;
+    border: 1px solid #d3e1f5;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 14px;
+}
+
+/* Mengatur masing-masing bagian informasi */
+.info-item {
+    flex: 1 1 140px;
+    padding-left: 18px;
+    border-left: 1px solid #b9cde8; /* Garis pemisah */
+}
+
+/* Bagian informasi pertama dibuat lebih lebar */
+.info-item:first-child {
+    border-left: none; /* Menghilangkan garis di sebelah kiri */
+    padding-left: 0;
+    flex: 1.4 1 200px;
+}
+
+/* Label kecil di atas nilai informasi */
+.info-label {
+    color: #475569;
+    font-size: 11px;
+}
+
+/* Nilai informasi peserta */
+.info-nilai {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 2px;
+}
+
+/* Nomor peserta menggunakan tulisan lebih besar */
+.info-nilai.besar {
+    font-size: 15px;
+}
+
+
+/* ================= MENU CEPAT ================= */
+/* Menyusun menu cepat menjadi beberapa kolom */
+.cepat-boxes {
+    display: grid;
+
+    /* Kolom menyesuaikan ruang, minimal lebarnya 110px */
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+/* Kotak setiap menu cepat */
+.cepat-item {
+    text-align: center;
+    border: 1px solid #e3ecf8;
+    border-radius: 8px;
+    background-color: #fafcff;
+    padding: 14px 6px;
+    line-height: 1.4;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Kotak sedikit naik saat kursor diarahkan */
+.cepat-item:hover {
+    transform: translateY(-4px);
+}
+
+/* Bentuk dasar ikon berwarna biru */
+.ikon-biru {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 10px;
+    border-radius: 8px;
+    background-color: #1d63d6;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ukuran ikon biru yang dipakai di kartu informasi */
+.ikon-biru.besar {
+    width: 38px;
+    height: 38px;
+    margin: 0 0 12px;
+}
+
+
+/* ================= JUDUL BAGIAN ================= */
+/* Mengatur judul dan tulisan Lihat Semua */
+.bagian-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0 10px;
+}
+
+/* Tulisan judul seperti Informasi & Layanan */
+.bagian-judul {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+/* Tulisan Lihat Semua di samping judul */
+.lihat {
+    color: #1d63d6;
+    font-size: 11px;
+    cursor: pointer;
+}
+
+
+/* ================= INFORMASI & LAYANAN ================= */
+/* Menyusun kartu informasi dalam beberapa kolom */
+.info-boxes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+/* Tampilan setiap kartu informasi */
+.info-kartu {
+    border: 1px solid #dfe8f5;
+    border-radius: 8px;
+    padding: 16px 16px 12px;
+    background-color: #fcfdff;
+}
+
+/* Judul di dalam kartu informasi */
+.kartu-judul {
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+/* Penjelasan singkat di dalam kartu */
+.kartu-teks {
+    color: #475569;
+    margin: 6px 0 12px;
+    min-height: 34px; /* Menjaga tinggi minimum bagian teks */
+}
+
+/* Tombol biru yang digunakan pada kartu informasi */
+.tombol {
+    background-color: #1565d8;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Warna tombol berubah saat kursor diarahkan */
+.tombol:hover {
+    background-color: #0f4fae;
+}
+
+/* Tombol dengan bentuk lebih lebar di bagian unduh */
+.tombol.lebar {
+    display: inline-block;
+    padding: 9px 18px;
+}
+
+
+/* ================= BERITA ================= */
+/* Menyusun daftar berita dalam beberapa kolom */
+.berita-boxes {
+    position: relative; /* Menjadi patokan posisi panah berita */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 14px;
+}
+
+/* Kotak untuk setiap berita */
+.berita-item {
+    border: 1px solid #dfe8f5;
+    border-radius: 8px;
+    overflow: hidden; /* Isi tidak keluar dari sudut kotak */
+    background-color: #fff;
+}
+
+/* Bagian gambar atau simbol berita */
+.gambar {
+    height: 66px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Warna latar untuk masing-masing berita */
+.g1 { background-color: #cfe1f7; }
+.g2 { background-color: #d8e8fb; }
+.g3 { background-color: #b9d7f5; }
+
+/* Bagian judul dan tanggal berita */
+.berita-info {
+    padding: 8px 10px 10px;
+}
+
+/* Judul setiap berita */
+.berita-judul {
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+/* Tulisan tanggal berita */
+.tanggal {
+    color: #64748b;
+    margin-top: 6px;
+}
+
+/* Tombol panah yang berada di samping daftar berita */
+.berita-panah {
+    position: absolute;
+    right: -10px;
+    top: 38px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+/* ================= KOLOM KANAN ================= */
+/* Kotak ringkasan peserta dan daftar layanan cepat */
+.ringkasan,
+.layanan-cepat {
+    background-color: #fff;
+    border: 1px solid #e3ecf8;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 14px;
+}
+
+/* Judul kotak ringkasan peserta */
+.ringkasan-judul {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 700;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e3ecf8;
+}
+
+/* Mengatur setiap baris informasi peserta */
+.baris {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+}
+
+/* Label informasi mengambil sisa ruang yang ada */
+.baris-label {
+    flex: 1;
+}
+
+/* Nilai informasi dibuat lebih tebal */
+.baris-nilai {
+    font-weight: 600;
+}
+
+/* Mengatur setiap pilihan di daftar layanan cepat */
+.lc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #eef3fa;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+/* Mengubah warna tulisan saat kursor diarahkan */
+.lc-item:hover {
+    color: #1d63d6;
+}
+
+/* Mendorong panah ke sisi paling kanan */
+.lc-item .panah {
+    margin-left: auto;
+    font-size: 18px;
+}
+
+/* Memberi jarak di bawah judul Layanan Cepat */
+.layanan-cepat .bagian-judul {
+    margin-bottom: 4px;
+}
+
+
+/* ================= PROMOSI DOWNLOAD ================= */
+/* Kotak promosi aplikasi Mobile JKN */
+.unduh {
+    position: relative; /* Menjadi patokan posisi simbol ponsel */
+    border-radius: 10px;
+    padding: 18px 16px;
+    background-image: linear-gradient(135deg, #cfe3fb, #e6f0fd);
+    color: #1d4f9c;
+}
+
+/* Judul pada kotak promosi */
+.unduh-judul {
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 16px;
+}
+
+/* Mengatur posisi dan ukuran simbol ponsel */
+.ponsel {
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    font-size: 70px;
+}
+
+/* Menyusun tulisan Google Play dan App Store */
+.toko {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Bentuk label toko aplikasi */
+.badge-toko {
+    background-color: #000;
+    color: white;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 5px;
+    border: 1px solid #555;
+}
+
+
+/* ================= FOOTER ================= */
+/* Bagian paling bawah website */
+.footer {
+    margin-top: 12px;
+    padding: 24px 3% 12px;
+    color: #d6e6f5;
+
+    /* Latar footer menggunakan perpaduan warna biru */
+    background-image: linear-gradient(135deg, #0a4a73, #0b5d8c 55%, #0a6a96);
+}
+
+/* Menyusun logo dan kolom informasi footer */
+.footer-atas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    align-items: flex-start;
+    padding-bottom: 24px;
+}
+
+/* Bagian logo dan nama PLN Mobile */
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1.4 1 260px;
+}
+
+/* Kotak logo PLN Mobile */
+.logo-pln {
+    width: 66px;
+    height: 66px;
+    border-radius: 14px;
+    background-image: linear-gradient(135deg, #3aa9d8, #12a39a);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.1;
+    padding: 16px 0 0 8px;
+}
+
+/* Tulisan nama PLN Mobile */
+.brand-nama {
+    color: #f3c613;
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+/* Slogan di bawah nama PLN Mobile */
+.brand-teks {
+    font-size: 11px;
+    margin-top: 6px;
+}
+
+/* Setiap kolom informasi di footer */
+.footer-kolom {
+    flex: 1 1 130px;
+}
+
+/* Judul kolom footer */
+.footer-judul {
+    color: white;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Tulisan tautan di footer */
+.footer-link {
+    font-size: 11px;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+/* Warna tautan berubah saat kursor diarahkan */
+.footer-link:hover {
+    color: white;
+}
+
+/* Kolom khusus media sosial */
+.footer-kolom.sosial {
+    flex: 0 1 140px;
+    padding-left: 24px;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* Menyusun simbol media sosial secara mendatar */
+.sosial-ikon {
+    display: flex;
+    gap: 14px;
+    color: white;
+    font-weight: 700;
+    font-size: 14px;
+}
+
+/* Tulisan hak cipta di bagian paling bawah footer */
+.footer-bawah {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-size: 10px;
+    padding-top: 14px;
+}
+
+
+/* ================= TAMPILAN LAYAR KECIL ================= */
+/* Aturan ini berlaku ketika lebar layar maksimal 1000px */
+@media (max-width: 1000px) {
+
+    /* Kolom utama ditumpuk menjadi satu kolom */
+    .halaman {
+        grid-template-columns: 1fr;
+    }
+
+    /* Tinggi menu menyesuaikan isi */
+    .menu {
+        height: auto;
+    }
+
+    /* Simbol kereta disembunyikan agar lebih hemat ruang */
+    .kereta {
+        display: none;
+    }
+
+    /* Panah berita disembunyikan di layar kecil */
+    .berita-panah {
+        display: none;
+    }
+}

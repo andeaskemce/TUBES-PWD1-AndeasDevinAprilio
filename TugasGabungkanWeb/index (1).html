@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <!-- Bagian awal halaman website -->
+    <meta charset="utf-8">
+
+    <!-- Supaya tampilan menyesuaikan ukuran layar -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Judul yang muncul di tab browser -->
+    <title>KAI - Integrasi Layanan untuk Perjalanan, Kesehatan, dan Energi</title>
+
+    <!-- Mengambil font Poppins dari Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+
+    <!-- Menghubungkan HTML dengan file CSS -->
+    <link rel="stylesheet" href="style (1).css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<!-- Bagian paling atas: logo, menu, pencarian, dan profil -->
+<div class="navbar">
+
+    <!-- Logo KAI dan tulisan penjelas di sampingnya -->
+    <div class="navbar-kiri">
+        <div class="logo-kai">KAI</div>
+        <div class="tagline">
+            Integrasi Layanan untuk<br>
+            Perjalanan, Kesehatan, dan Energi
+        </div>
+    </div>
+
+    <!-- Menu navigasi di bagian atas -->
+    <div class="menu">
+        <div class="menu-item aktif">Beranda</div>
+        <div class="menu-item">Layanan</div>
+        <div class="menu-item">Riwayat</div>
+        <div class="menu-item">Bantuan</div>
+    </div>
+
+    <!-- Tampilan kolom pencarian -->
+    <div class="pencarian">
+        ⌕&nbsp; Cari layanan, jadwal, atau informasi...
+    </div>
+
+    <!-- Profil pengguna di sebelah kanan -->
+    <div class="user">
+        <div class="avatar">👤</div>
+        <div class="user-nama">Andreas Devin Aprilio</div>
+        <div class="panah">⌄</div>
+    </div>
+</div>
+
+
+<!-- ================= HERO ================= -->
+<!-- Bagian banner besar di bawah navbar -->
+<div class="hero">
+
+    <!-- Simbol kereta di sisi kiri banner -->
+    <div class="kereta">🚆</div>
+
+    <!-- Judul, penjelasan, dan pilihan tiga layanan -->
+    <div class="hero-isi">
+
+        <div class="hero-judul">Selamat Datang, Andreas!</div>
+
+        <div class="hero-teks">
+            Satu akun, akses semua layanan penting untuk perjalanan,<br>
+            kesehatan, dan kebutuhan energi Anda.
+        </div>
+
+        <!-- Tiga kotak layanan utama -->
+        <div class="hero-boxes">
+
+            <!-- Layanan KAI -->
+            <div class="hero-item">
+                <div class="hero-ikon">🚆</div>
+                <div>
+                    <div class="hero-nama">KAI</div>
+                    <div class="hero-desk">Tiket &amp; Jadwal Kereta</div>
+                </div>
+            </div>
+
+            <!-- Layanan Mobile JKN -->
+            <div class="hero-item">
+                <div class="hero-ikon">✚</div>
+                <div>
+                    <div class="hero-nama">Mobile JKN</div>
+                    <div class="hero-desk">Kesehatan &amp; Kepesertaan</div>
+                </div>
+            </div>
+
+            <!-- Layanan PLN Mobile -->
+            <div class="hero-item">
+                <div class="hero-ikon hijau">⚡</div>
+                <div>
+                    <div class="hero-nama">PLN Mobile</div>
+                    <div class="hero-desk">Listrik &amp; Pembayaran</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= HALAMAN UTAMA ================= -->
+<!-- Membagi isi halaman menjadi kolom kiri, tengah, dan kanan -->
+<div class="halaman">
+
+    <!-- ===== SIDEBAR / KOLOM KIRI ===== -->
+    <!-- Berisi logo JKN, menu samping, dan promosi -->
+    <div class="sidebar">
+
+        <div class="logo-jkn">
+            mobile<br><b>JKN</b>
+        </div>
+
+        <!-- Menu yang sedang dipilih diberi class aktif -->
+        <div class="side-menu aktif">
+            <div class="side-ikon">🏠</div>Beranda
+        </div>
+
+        <div class="side-menu">
+            <div class="side-ikon">💳</div>Kartu Peserta
+        </div>
+
+        <div class="side-menu">
+            <div class="side-ikon">🩺</div>Pelayanan Kesehatan
+        </div>
+
+        <div class="side-menu">
+            <div class="side-ikon">🕒</div>Riwayat Pelayanan
+        </div>
+
+        <div class="side-menu">
+            <div class="side-ikon">📄</div>Pengajuan Surat
+        </div>
+
+        <div class="side-menu">
+            <div class="side-ikon">ⓘ</div>Info Program JKN
+        </div>
+
+        <div class="side-menu">
+            <div class="side-ikon">⠿</div>Fitur Lainnya
+        </div>
+
+        <!-- Kotak promosi di bawah menu samping -->
+        <div class="side-promo">
+            <div class="promo-judul">
+                JKN Mobile<br>
+                Mudah, Cepat, dan<br>
+                Tanpa Ribet
+            </div>
+
+            <div class="promo-script">
+                Sehat Bersama<br>
+                JKN ♡
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ===== KOLOM TENGAH ===== -->
+    <!-- Bagian utama yang berisi informasi peserta dan berita -->
+    <div class="tengah">
+
+        <!-- Profil peserta JKN -->
+        <div class="profil">
+            <div class="profil-kiri">
+
+                <div class="avatar besar">👤</div>
+
+                <div>
+                    <div class="profil-nama">Andreas Devin Aprilio</div>
+
+                    <div class="profil-sub">
+                        Peserta JKN
+                        <div class="badge">Aktif</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tombol untuk melihat kartu peserta -->
+            <div class="tombol-garis">
+                ▭&nbsp; Lihat Kartu Peserta &nbsp;›
+            </div>
+        </div>
+
+
+        <!-- Informasi singkat tentang peserta -->
+        <div class="info-bar">
+
+            <div class="info-item">
+                <div class="info-label">Nomor Peserta</div>
+                <div class="info-nilai besar">0001234567890 ⧉</div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-label">Tanggal Lahir</div>
+                <div class="info-nilai">25 Apr 2006</div>
+            </div>
+
+            <div class="info-item">
+                <div class="info-label">Kelas</div>
+                <div class="info-nilai">Kelas 1</div>
+            </div>
+
+        </div>
+
+
+        <!-- Menu cepat yang ditampilkan dalam beberapa kotak -->
+        <div class="cepat-boxes">
+
+            <div class="cepat-item">
+                <div class="ikon-biru">✚</div>
+                Cek Status<br>Kepesertaan
+            </div>
+
+            <div class="cepat-item">
+                <div class="ikon-biru">📋</div>
+                Pendaftaran<br>Pelayanan
+            </div>
+
+            <div class="cepat-item">
+                <div class="ikon-biru">📄</div>
+                Riwayat<br>Pelayanan
+            </div>
+
+            <div class="cepat-item">
+                <div class="ikon-biru">🧾</div>
+                Info<br>Pembayaran
+            </div>
+
+            <div class="cepat-item">
+                <div class="ikon-biru">✏️</div>
+                Ubah Data<br>Peserta
+            </div>
+
+        </div>
+
+
+        <!-- Judul bagian informasi dan layanan -->
+        <div class="bagian-header">
+            <div class="bagian-judul">Informasi &amp; Layanan</div>
+            <div class="lihat">Lihat Semua ›</div>
+        </div>
+
+        <!-- Tiga kartu informasi layanan -->
+        <div class="info-boxes">
+
+            <div class="info-kartu">
+                <div class="ikon-biru besar">🩺</div>
+                <div class="kartu-judul">
+                    Pelayanan Kesehatan<br>Tingkat Pertama
+                </div>
+                <div class="kartu-teks">
+                    Temukan fasilitas kesehatan terdekat dari lokasi Anda.
+                </div>
+                <div class="tombol">Cari Faskes</div>
+            </div>
+
+            <div class="info-kartu">
+                <div class="ikon-biru besar">🗓️</div>
+                <div class="kartu-judul">Jadwal Dokter</div>
+                <div class="kartu-teks">
+                    Cek jadwal dokter dan buat janji temu.
+                </div>
+                <div class="tombol">Lihat Jadwal</div>
+            </div>
+
+            <div class="info-kartu">
+                <div class="ikon-biru besar">📄</div>
+                <div class="kartu-judul">Panduan Layanan</div>
+                <div class="kartu-teks">
+                    Informasi lengkap seputar layanan JKN.
+                </div>
+                <div class="tombol">Selengkapnya</div>
+            </div>
+
+        </div>
+
+
+        <!-- Judul bagian berita -->
+        <div class="bagian-header">
+            <div class="bagian-judul">Berita &amp; Pengumuman</div>
+            <div class="lihat">Lihat Semua</div>
+        </div>
+
+        <!-- Daftar berita yang ditampilkan dalam bentuk kartu -->
+        <div class="berita-boxes">
+
+            <div class="berita-item">
+                <div class="gambar g1">📱</div>
+                <div class="berita-info">
+                    <div class="berita-judul">
+                        Pembaruan Aplikasi Mobile JKN<br>Versi Terbaru
+                    </div>
+                    <div class="tanggal">17 Okt 2025</div>
+                </div>
+            </div>
+
+            <div class="berita-item">
+                <div class="gambar g2">📲</div>
+                <div class="berita-info">
+                    <div class="berita-judul">
+                        Cara Mudah Cek Status<br>Kepesertaan JKN
+                    </div>
+                    <div class="tanggal">12 Okt 2025</div>
+                </div>
+            </div>
+
+            <div class="berita-item">
+                <div class="gambar g3">👩‍⚕️👨‍⚕️</div>
+                <div class="berita-info">
+                    <div class="berita-judul">
+                        Layanan Kesehatan Digital<br>Semakin Mudah
+                    </div>
+                    <div class="tanggal">5 Okt 2025</div>
+                </div>
+            </div>
+
+            <!-- Simbol panah di sisi berita -->
+            <div class="berita-panah">›</div>
+
+        </div>
+    </div>
+
+
+    <!-- ===== KOLOM KANAN ===== -->
+    <!-- Berisi ringkasan peserta, layanan cepat, dan promosi aplikasi -->
+    <div class="kanan">
+
+        <!-- Ringkasan data peserta -->
+        <div class="ringkasan">
+
+            <div class="ringkasan-judul">
+                <div class="side-ikon">👤</div>
+                Ringkasan Peserta
+            </div>
+
+            <div class="baris">
+                <div class="side-ikon">✱</div>
+                <div class="baris-label">Status Kepesertaan</div>
+                <div class="badge">Aktif</div>
+            </div>
+
+            <div class="baris">
+                <div class="side-ikon">⚕</div>
+                <div class="baris-label">Faskes Tingkat I</div>
+                <div class="baris-nilai">Puskesmas Cibeureum</div>
+            </div>
+
+            <div class="baris">
+                <div class="side-ikon">▣</div>
+                <div class="baris-label">Kelas Rawat</div>
+                <div class="baris-nilai">Kelas 1</div>
+            </div>
+
+        </div>
+
+
+        <!-- Daftar layanan yang sering digunakan -->
+        <div class="layanan-cepat">
+
+            <div class="bagian-judul">Layanan Cepat</div>
+
+            <div class="lc-item">
+                <div class="side-ikon">📄</div>
+                Cek Status Kepesertaan
+                <div class="panah">›</div>
+            </div>
+
+            <div class="lc-item">
+                <div class="side-ikon">🗓️</div>
+                Pendaftaran Pelayanan
+                <div class="panah">›</div>
+            </div>
+
+            <div class="lc-item">
+                <div class="side-ikon">📄</div>
+                Riwayat Pelayanan
+                <div class="panah">›</div>
+            </div>
+
+            <div class="lc-item">
+                <div class="side-ikon">📄</div>
+                Pengajuan Surat
+                <div class="panah">›</div>
+            </div>
+
+            <div class="lc-item">
+                <div class="side-ikon">ⓘ</div>
+                Info Program JKN
+                <div class="panah">›</div>
+            </div>
+
+        </div>
+
+
+        <!-- Promosi untuk mengunduh aplikasi -->
+        <div class="unduh">
+
+            <div class="unduh-judul">
+                JKN Mobile<br>
+                Semakin Mudah,<br>
+                Semakin Dekat
+            </div>
+
+            <div class="ponsel">📱</div>
+
+            <div class="tombol lebar">Download Sekarang</div>
+
+            <!-- Tampilan nama toko aplikasi -->
+            <div class="toko">
+                <div class="badge-toko">▶ Google Play</div>
+                <div class="badge-toko"> App Store</div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+<!-- Bagian paling bawah website, berisi informasi PLN -->
+<div class="footer">
+
+    <div class="footer-atas">
+
+        <!-- Logo dan slogan PLN Mobile -->
+        <div class="footer-brand">
+
+            <div class="logo-pln">
+                PLN<br>mobile
+            </div>
+
+            <div>
+                <div class="brand-nama">
+                    PLN<br>mobile
+                </div>
+
+                <div class="brand-teks">
+                    Energi untuk Kehidupan yang Lebih Baik
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Daftar layanan PLN -->
+        <div class="footer-kolom">
+            <div class="footer-judul">Layanan</div>
+            <div class="footer-link">Token Listrik</div>
+            <div class="footer-link">Pembayaran Tagihan</div>
+            <div class="footer-link">Pasang Baru</div>
+            <div class="footer-link">Perubahan Daya</div>
+        </div>
+
+
+        <!-- Daftar informasi PLN -->
+        <div class="footer-kolom">
+            <div class="footer-judul">Informasi</div>
+            <div class="footer-link">Promo &amp; Diskon</div>
+            <div class="footer-link">Lokasi Layanan</div>
+            <div class="footer-link">Bantuan</div>
+            <div class="footer-link">FAQ</div>
+        </div>
+
+
+        <!-- Informasi tentang perusahaan -->
+        <div class="footer-kolom">
+            <div class="footer-judul">Perusahaan</div>
+            <div class="footer-link">Tentang PLN</div>
+            <div class="footer-link">Karir</div>
+            <div class="footer-link">Berita</div>
+            <div class="footer-link">Kebijakan Privasi</div>
+        </div>
+
+
+        <!-- Simbol media sosial -->
+        <div class="footer-kolom sosial">
+            <div class="footer-judul">Ikuti Kami</div>
+
+            <div class="sosial-ikon">
+                <div>f</div>
+                <div>𝕏</div>
+                <div>◎</div>
+                <div>▶</div>
+            </div>
+        </div>
+
+
+        <!-- Informasi untuk mengunduh PLN Mobile -->
+        <div class="footer-kolom">
+            <div class="footer-judul">Download Aplikasi PLN Mobile</div>
+
+            <div class="toko">
+                <div class="badge-toko">▶ Google Play</div>
+                <div class="badge-toko"> App Store</div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Tulisan paling bawah footer -->
+    <div class="footer-bawah">
+        <div>© 2025 PT PLN (Persero). All rights reserved.</div>
+        <div>Listrik untuk Indonesia</div>
+    </div>
+
+</div>
+
+</body>
+</html>
